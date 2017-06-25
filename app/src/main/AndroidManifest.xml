@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="appsiam.tua.saran.mysiam">
 
+    //ถ้าผู้ใช้มีการใช้ location มันจะทำการเปิดเผยตำแหน่ง
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!--
