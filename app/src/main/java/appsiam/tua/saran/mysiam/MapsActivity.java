@@ -127,6 +127,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 urlPHP = myConstant.getUrlEditLocation();
             }
 
+
             AddAndEditLocation addAndEditLocation = new AddAndEditLocation(MapsActivity.this);
             addAndEditLocation.execute(userStrings[1],
                     Double.toString(latADouble),
@@ -154,7 +155,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if (locationManager.isProviderEnabled(strPovider)) {
             //ถ้าจำไม่ได้ต้องใส่อะไรบ้างใน method ให้กด ctrl+p มันจะแสดง suggestion ให้ดู
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
                 // here to request the missing permissions, and then overriding
@@ -264,7 +266,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .getLegList()
                     .get(0)
                     .getDirectionPoint();
-            mMap.addPolyline(DirectionConverter.createPolyline(MapsActivity.this, arrayList, 5, Color.BLUE));
+            mMap.addPolyline(DirectionConverter
+                    .createPolyline(MapsActivity.this, arrayList, 5, Color.BLUE));
         }
 
     }
